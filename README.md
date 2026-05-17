@@ -14,6 +14,8 @@
 > **💡 Tip:** Use the **Role Switcher** in the sidebar to demo all 3 roles without logging out.
 
 ---
+System.png
+
 
 ## ⚡ Quick Start
 
