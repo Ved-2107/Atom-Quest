@@ -244,5 +244,4 @@ GET /api/shared-goals         Shared department goals
 ---
 
 *Built for AtomQuest Hackathon 1.0 — GoalFlow Enterprise Performance Portal*
-#   A t o m - Q u e s t  
- 
+#
