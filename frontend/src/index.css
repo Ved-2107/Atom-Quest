@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sidebar-width: 260px;
+    --navbar-height: 64px;
+    --brand: 98 114 243;
+    --radius: 0.75rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { @apply scroll-smooth antialiased; }
+
+  body {
+    @apply font-sans text-surface-900 bg-surface-50;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  .dark body { @apply text-surface-100 bg-surface-950; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-glass;
+  }
+  .dark .glass {
+    @apply bg-surface-800/70 border-surface-700/30;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-surface-100 shadow-card;
+  }
+  .dark .card {
+    @apply bg-surface-800 border-surface-700/60;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 text-white font-medium text-sm
+           hover:bg-brand-700 active:scale-[0.98] transition-all shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-100 text-surface-700 font-medium text-sm
+           hover:bg-surface-200 active:scale-[0.98] transition-all;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-3 py-2 rounded-xl text-surface-600 font-medium text-sm
+           hover:bg-surface-100 active:scale-[0.98] transition-all;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .input {
+    @apply w-full px-3.5 py-2.5 rounded-xl border border-surface-200 bg-white text-sm text-surface-900
+           placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-400
+           transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .dark .input {
+    @apply bg-surface-800 border-surface-700 text-surface-100;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-surface-700 mb-1.5;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-surface-600
+           hover:bg-brand-50 hover:text-brand-700 transition-all cursor-pointer;
+  }
+
+  .sidebar-link.active {
+    @apply bg-brand-600 text-white shadow-sm;
+  }
+
+  .stat-card {
+    @apply card p-5 flex flex-col gap-3 animate-slide-up;
+  }
+
+  .page-header {
+    @apply mb-8;
+  }
+
+  .page-title {
+    @apply text-2xl font-display font-bold text-surface-900 tracking-tight;
+  }
+
+  .page-subtitle {
+    @apply text-sm text-surface-500 mt-1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent;
+  }
+
+  .bg-mesh {
+    background-image:
+      radial-gradient(at 40% 20%, hsla(230,100%,95%,0.8) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(240,100%,96%,0.6) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(210,100%,95%,0.5) 0px, transparent 50%);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #e2e8f0 transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 4px; }
+}
