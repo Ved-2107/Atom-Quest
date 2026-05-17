@@ -14,8 +14,9 @@
 > **💡 Tip:** Use the **Role Switcher** in the sidebar to demo all 3 roles without logging out.
 
 ---
-System.png
+## System Architecture
 
+![System Architecture](System.png)
 
 ## ⚡ Quick Start
 
