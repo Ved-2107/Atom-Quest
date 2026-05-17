@@ -87,6 +87,7 @@ goal-tracker/
 ```
 
 ---
+![Uploading image.png…]()
 
 ## ✅ BRD Coverage Checklist
 
